@@ -1,0 +1,47 @@
+{
+ "kind": "alt",
+ "planned": "2026-11-16T00:22:21Z",
+ "new_feature": "A completely free, open-source, fully client-side PDF merger and splitter with no account, no watermark, no ad wall, no limits, no expiry, no tracking, and no network calls.",
+ "upstreams": [
+  {
+   "repo": "SimplePDF/simplepdf-embed",
+   "sha": "18f06e7e8ee2f63b20bbb8fab10ff93a5702478b",
+   "licence": "mit",
+   "portable": true,
+   "stars": 409,
+   "use": "port",
+   "what": "Browser-based PDF editor with merge and page manipulation; portable MIT project suitable as a clean-room fork base for merge and split behaviour."
+  }
+ ],
+ "observed": {
+  "family": "pdf merge split",
+  "target": {
+   "url": "https://www.ilovepdf.com/merge_pdf",
+   "limits": "REA: limit wording ['Login', 'Sign up']; 9 ad/tracker hosts",
+   "sources": [
+    "https://www.ilovepdf.com/merge_pdf"
+   ]
+  },
+  "rea": {
+   "url": "https://www.ilovepdf.com/merge_pdf",
+   "observed_at": "2026-11-16T00:20:29Z",
+   "tracker_or_ad_hosts": [
+    "8a0efaaf3a69ec3f26afba9e98569abc.safeframe.googlesyndication.com",
+    "b850bca40dc56431056c0bc8c027dd1a.safeframe.googlesyndication.com",
+    "cm.g.doubleclick.net",
+    "gum.criteo.com",
+    "pagead2.googlesyndication.com",
+    "securepubads.g.doubleclick.net",
+    "static.criteo.net",
+    "www.google-analytics.com",
+    "www.googletagmanager.com"
+   ],
+   "limit_wording": [
+    "Login",
+    "Sign up"
+   ],
+   "method": "REA capture_browser_scenario, anonymous visitor, page load + 3 s, accessibility tree + network events; nothing submitted",
+   "error": null
+  }
+ }
+}

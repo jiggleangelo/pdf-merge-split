@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Merge and split PDF files entirely in your browser. Free, open source, no upload, no account, no tracking. Nothing you type leaves this page.">
+  <title>PDF Merge &amp; Split — free, in your browser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>PDF Merge &amp; Split</h1>
+    <p class="tagline">Combine several PDFs into one, or split a PDF into pages — all on your device.</p>
+  </header>
+
+  <main>
+    <p class="notice" role="note">Do not paste passwords, one-time codes, card or bank numbers, or ID numbers.</p>
+
+    <section class="card" aria-labelledby="merge-h">
+      <h2 id="merge-h">Merge PDFs</h2>
+      <p>Add two or more PDF files, arrange them in the order you want, then merge them into a single PDF.</p>
+
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Add PDF files. Click or press Enter to browse, or drag and drop PDF files here.">
+        <p>Drag and drop PDF files here, or click to browse.</p>
+        <p class="hint">You can add as many PDFs as you like.</p>
+      </div>
+
+      <div class="row">
+        <button type="button" id="add-files" class="btn">Add files</button>
+        <button type="button" id="merge" class="btn btn-primary" disabled>Merge</button>
+        <button type="button" id="clear" class="btn btn-ghost">Clear</button>
+      </div>
+
+      <input type="file" id="file-input" accept="application/pdf" multiple hidden>
+
+      <ul class="file-list" id="file-list" aria-live="polite"></ul>
+
+      <p class="status" id="merge-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="split-h">
+      <h2 id="split-h">Split a PDF</h2>
+      <p>Choose one PDF, then enter page ranges to extract, or split every page into its own file.</p>
+
+      <div class="row">
+        <button type="button" id="split-add" class="btn">Choose PDF</button>
+        <button type="button" id="split" class="btn btn-primary" disabled>Split</button>
+      </div>
+
+      <input type="file" id="split-file-input" accept="application/pdf" hidden>
+
+      <div class="split-controls">
+        <label for="split-ranges">Page ranges (e.g. <code>1-3, 5, 8-10</code>)</label>
+        <input type="text" id="split-ranges" placeholder="1-3, 5, 8-10" autocomplete="off">
+        <button type="button" id="split-all" class="btn btn-ghost">Split all pages</button>
+      </div>
+
+      <p class="status" id="split-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card" aria-labelledby="examples-h">
+      <h2 id="examples-h">Made-up examples</h2>
+      <p>Examples on this page are made up.</p>
+      <ul class="example-list" id="example-list"></ul>
+    </section>
+
+    <section class="card" aria-labelledby="limits-h">
+      <h2 id="limits-h">Honest limits</h2>
+      <p>Client-side PDF processing may not support every PDF feature. Complex layouts, encrypted PDFs, or broken files may fail. The tool is not a substitute for a full desktop PDF editor.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Free and open source (MIT). Runs in your browser; nothing you type leaves this page. Built by AI agents at Manykiln. Nothing is charged.</p>
+    <nav aria-label="Footer links">
+      <a href="https://manykiln.com/tools/pdf-merge-split/">This tool</a>
+      <a href="https://github.com/jiggleangelo/pdf-merge-split">Source on GitHub</a>
+      <a href="https://join.manykiln.com/?from=pdf-merge-split">Join Manykiln</a>
+      <a href="https://manykiln.com/privacy">Privacy</a>
+    </nav>
+  </footer>
+
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
